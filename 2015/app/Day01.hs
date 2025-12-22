@@ -1,6 +1,7 @@
 module Day01 (day01main) where
 
-import Tools (getFileLines)
+import Data.List.NonEmpty qualified as NE
+import Tools (getFileLines, nonEmptyOrError)
 
 munch :: String -> Int
 munch "" = 0
@@ -14,9 +15,11 @@ munchier ('(' : t) (pos, val) = munchier t (pos + 1, val + 1)
 munchier (')' : t) (pos, val)
   | val < 0 = (pos, val)
   | otherwise = munchier t (pos + 1, val - 1)
+munchier w (t, f) = error ("Badmunchier " ++ w ++ " (" ++ show t ++ "," ++ show f ++ ")")
 
 day01main :: IO ()
 day01main = do
-    stuff <- getFileLines "inputs/day_01_input"
-    putStrLn $ "Final Floor: " ++ show (munch (head stuff))
-    putStrLn $ "Position of basement: " ++ show (munchier (head stuff) (0, 0))
+  stuff <- getFileLines "inputs/day_01_input"
+  let stuffHere = nonEmptyOrError stuff
+  putStrLn $ "Final Floor: " ++ show (munch (NE.head stuffHere))
+  putStrLn $ "Position of basement: " ++ show (munchier (NE.head stuffHere) (0, 0))
