@@ -12,3 +12,15 @@
 - 2017: TBD
 - 2016: TBD
 - 2015: ![Haskell](https://skillicons.dev/icons?i=haskell)
+
+
+### Language Bullpen
+- Lua
+- Ada
+- Erlang
+- Scala
+- Julia
+- C++
+- Zig
+- Powershell
+- Perl
