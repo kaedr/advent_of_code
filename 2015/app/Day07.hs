@@ -6,7 +6,6 @@ import Data.Map (Map)
 import Data.Map qualified as DM
 import Data.Maybe (fromJust)
 import Data.Word
-import Debug.Trace (traceShowId)
 import Text.Read (readMaybe)
 import Tools (getFileLines, splitBy)
 
