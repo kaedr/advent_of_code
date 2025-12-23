@@ -11,6 +11,7 @@ import Day06Arrays (day06Amain)
 import Day07 (day07main)
 import Day08 (day08main)
 import Day09 (day09main)
+import Day10 (day10main)
 import System.Environment (getArgs)
 
 dispatch :: String -> IO ()
@@ -24,6 +25,7 @@ dispatch "66" = day06Amain
 dispatch "7" = day07main
 dispatch "8" = day08main
 dispatch "9" = day09main
+dispatch "10" = day10main
 dispatch input = putStr $ "No function for day: " ++ input
 
 main :: IO ()

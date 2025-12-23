@@ -62,6 +62,7 @@ executable x2015
     Day08
     Day09
     Day0X
+    Day10
     Tools
 
   -- LANGUAGE extensions used by modules in this package.
