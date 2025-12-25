@@ -61,14 +61,17 @@ executable x2015
     Day07
     Day08
     Day09
-    Day0X
     Day10
+    Day11
+    Day12
+    DayXX
     Tools
 
   -- LANGUAGE extensions used by modules in this package.
   -- other-extensions:
   -- Other library packages from which modules are imported.
   build-depends:
+    aeson,
     array,
     base,
     bytestring,
@@ -76,6 +79,9 @@ executable x2015
     crypton,
     directory,
     regex-posix,
+    scientific,
+    text,
+    unordered-containers,
     utf8-string,
 
   -- Directories containing source files.
